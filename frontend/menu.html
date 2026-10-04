@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menú | Aroma Café</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            ☕ Aroma Café
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="admin/login.html">Administración</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="section">
+
+            <h1>Menú</h1>
+
+            <p class="section-description">
+                Descubre nuestra selección de cafés, bebidas,
+                postres y opciones para acompañar.
+            </p>
+
+
+            <!-- Filtros -->
+
+            <div id="categorias" class="filtros">
+
+                <button
+                    class="btn filtro activo"
+                    data-categoria="todas">
+                    Todos
+                </button>
+
+            </div>
+
+
+            <!-- Productos -->
+
+            <div
+                id="productos"
+                class="productos-grid">
+
+                <p>Cargando productos...</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Aroma Café</p>
+
+        <p>
+            Café, sabor y buenos momentos.
+        </p>
+
+    </footer>
+
+
+    <script src="js/menu.js"></script>
+
+</body>
+
+</html>

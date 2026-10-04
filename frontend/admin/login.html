@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Aroma Café</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">☕ Aroma Café</div>
+            <div class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../menu.html">Menú</a>
+                <a href="../nosotros.html">Nosotros</a>
+                <a href="../contacto.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="seccion">
+        <div class="formulario-admin">
+            <h1>Acceso administrativo</h1>
+            <p>Ingresa para gestionar los productos.</p>
+
+            <form id="loginForm">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" required>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" required>
+
+                <button type="submit" class="btn">Ingresar</button>
+            </form>
+
+            <p id="mensaje"></p>
+        </div>
+    </main>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

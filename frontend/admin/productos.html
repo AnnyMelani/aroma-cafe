@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Aroma Café</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/auth.js"></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">☕ Aroma Café - Administración</div>
+
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="productos.html">Productos</a>
+            <a href="../index.html">Ver sitio</a>
+            <a href="#" onclick="cerrarSesion()">Cerrar sesión</a>
+        </div>
+    </nav>
+</header>
+
+<main class="seccion">
+
+    <h1>Gestión de productos</h1>
+
+    <div class="acciones-admin">
+        <a href="nuevo-producto.html" class="btn">+ Nuevo producto</a>
+    </div>
+
+    <div class="tabla-contenedor">
+        <table class="tabla-productos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Disponibilidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="lista-productos"></tbody>
+        </table>
+    </div>
+
+</main>
+
+<div id="modalEliminar" class="modal">
+    <div class="modal-contenido">
+        <h2>Eliminar producto</h2>
+        <p>¿Estás seguro de que deseas eliminar este producto?</p>
+
+        <div class="modal-acciones">
+            <button id="cancelarEliminar" class="btn-secundario">Cancelar</button>
+            <button id="confirmarEliminar" class="btn-eliminar">Eliminar</button>
+
+        </div>
+    </div>
+</div>
+
+<div id="mensajeExito" class="mensaje-exito">
+    Producto eliminado correctamente.
+</div>
+
+
+<script src="../js/productos-admin.js"></script>
+
+</body>
+</html>
