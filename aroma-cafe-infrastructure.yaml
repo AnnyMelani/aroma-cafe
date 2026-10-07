@@ -1,0 +1,48 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: >
+  Infraestructura como código para Aroma Café.
+  Arquitectura basada en VPC, subredes públicas y privadas,
+  ECS, RDS, S3, ALB, EC2 y CloudWatch.
+
+Parameters:
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC existente de Aroma Café
+
+  PublicSubnet1:
+    Type: AWS::EC2::Subnet::Id
+    Description: Subred pública 1
+
+  PublicSubnet2:
+    Type: AWS::EC2::Subnet::Id
+    Description: Subred pública 2
+
+  PrivateSubnet1:
+    Type: AWS::EC2::Subnet::Id
+    Description: Subred privada 1
+
+  PrivateSubnet2:
+    Type: AWS::EC2::Subnet::Id
+    Description: Subred privada 2
+
+Resources:
+
+  AromaCafeLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /ecs/aroma-cafe
+      RetentionInDays: 7
+
+Outputs:
+
+  LogGroup:
+    Description: Grupo de logs utilizado por ECS
+    Value: !Ref AromaCafeLogGroup
+
+  Architecture:
+    Description: Arquitectura AWS de Aroma Café
+    Value: >
+      Internet -> ALB -> ECS Fargate -> RDS PostgreSQL,
+      con S3 para almacenamiento y CloudWatch para monitoreo.
